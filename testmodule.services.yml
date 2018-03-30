@@ -1,0 +1,10 @@
+services: 
+  testmodule.email_domain_validator: 
+    arguments: 
+      - "@testmodule.email_parser"
+      - 
+        - gmail.com
+        - yahoo.com
+    class: Drupal\testmodule\Email\EmailDomainValidator
+  testmodule.email_parser: 
+    class: Drupal\testmodule\Email\EmailParser
